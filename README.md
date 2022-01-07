@@ -4,7 +4,7 @@
 - 미니 프로젝트 등
 - 교육기간 : 21.12.20 ~ 22.06.09
 
-## �목차
+## 📃목차
 
 <details markdown="1">
 <summary><strong>디자인씽킹: 21.12.20 ~ 21.12.24</strong></summary>
