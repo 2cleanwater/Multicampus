@@ -7,6 +7,11 @@
 ## 📃목차
 
 
-<strong>디자인씽킹: 21.12.20 ~ 21.12.24</strong>
+- <strong>디자인씽킹: 21.12.20 ~ 21.12.24</strong>
 
-<summary><strong>Java: 21.12.27 ~ 22.01.13</strong></summary>
+- <strong>Java: 21.12.27 ~ 22.01.13</strong>
+
+- <strong>SQL: 22.01.18 ~ 22.01.20</strong>
+
+- <strong>알고리즘: 22.01.20 ~ 22.01.27</strong>
+
