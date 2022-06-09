@@ -1,0 +1,41 @@
+package com.mydb.boot.service;
+//View -> Controller -> Biz -> Dao
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.mydb.boot.dao.UserDao;
+import com.mydb.boot.domain.User;
+
+@Transactional
+@Service
+public class UserService {
+	
+	@Autowired
+	@Qualifier("UserDaoJdbc") //후손의 객체명을 컴포넌트 명으로 지정해준다.
+	UserDao dao;
+	
+	public int insertOne(User user) {
+		
+	}
+	
+	public User selectOne(String userId) {
+		
+	}
+	
+	public List<User> selectMany() {
+		
+	}
+	public int updateOne(User user) {
+		
+	}
+	
+	public int deleteOne(String userId) {
+		
+	}
+}

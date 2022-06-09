@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		type: "GET",
+		url : "ex01.jsp?no=100",
+		dataType : "text",
+		error : function(){alert("failllllll")},
+		success : function(data){
+			//alert("answer :" + data)
+			//내가 원하는 시점으로 받고싶다.
+			$('#result').html(data)
+		}
+	});
+
+});
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Ajax랑 통신하기</h1>
+	<div id = "result"></div>
+</body>
+</html>

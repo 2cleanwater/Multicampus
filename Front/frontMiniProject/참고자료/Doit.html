@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>자바스크립트를 활용한 유효성 검사2</TITLE>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=bgKid4NZoQ6MB2lfBPpedm1EkPQ59u4kbsr5C7oHnqCy4pIcmbnlIsZf1NHxvqTs76MTpJ3AdqT5xRe5a2j-s_4kLkqQitLYilemOTYdHt4p4MK3QFlThEYfD6UyALdK" charset="UTF-8"></script></HEAD>
+<SCRIPT language="javaScript">
+
+	function check_onclick(){
+		theForm=document.frm1;
+		
+		if(theForm.input1.value=="" || theForm.input2.value=="" || theForm.input3.value=="" ){
+			if(theForm.input1.value==""){
+				alert("필수 입력란1이 비어있습니다. 확인해주세요.")
+				theForm.input1.focus();
+			}else if(theForm.input2.value==""){
+				alert("필수 입력란2이 비어있습니다. 확인해주세요.")
+				theForm.input2.focus();
+			}else{
+				alert("필수 입력란3이 비어있습니다. 확인해주세요.")
+				theForm.input3.focus();
+			}
+		}
+		else{
+			alert("필수 입력란을 모두 입력하셨습니다.");
+		}
+	}
+
+</SCRIPT>
+<BODY>
+<FORM name=frm1>
+	필수 입력란1 : <input type=text name=input1 size=10> <br>
+	필수 입력란2 : <input type=text name=input2 size=10> <br>
+	필수 입력란3 : <input type=text name=input3 size=10> <br>
+	보통 입력란4 : <input type=text name=input4 size=10>(생략가능) <br>
+	<input type=button value="check" onclick="check_onclick()">
+</FORM>
+
+</BODY>
+</HTML>

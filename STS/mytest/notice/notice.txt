@@ -1,0 +1,47 @@
+<<spring-Boot 기본 설계 >>
+
+1) 세션 레디스 (Session Redis) , H2 or MySql : 세션관리 비정형, 정형_기본 데이터 저장 (RDB)
+
+2) spring boot web MVC : 웹설계 구현 로직 spring-boot-starter-web
+
+3) spring boot Session Redis : 레디스(제디스)를 이용한 비정형 세션 관리
+
+4) spring boot Security / spring boot  OAuth2 : 회원 인증, 권한 관리
+
+5) Spring boot data Rest : Rest API
+
+6) Spring boot Batch : app을 만들면 버전관리, 백앤드 데이터 및 모듈관리를 주기적으로 관리.
+
+7) Spring boot  Data : JDBC, spring-JDBC, JPA 등 
+			spring-boot-starter-data-jpa
+			spring-boot-starter-data-rest
+			spring-boot-starter-data-redis
+			spring-boot-starter-aop
+			spring-boot-starter-batch
+			
+			JPA -> Hibernate -> dbserver
+			h2 -> Mapper(Hibernate / mybatis) -> / dbserver /
+			Redis
+ 
+ 
+ ----------------------------------------------------------------
+ 
+ 디렉토리 구조
+ 
+ 	1) /src/main/java : 자바 소스 경로
+ 	
+ 	1) /src/main/resource
+				-static
+				-templates
+				-app.pro 	
+ 	1) /src/test/java
+ 	
+ 	
+ 	@SpringBootApplication :  @Configuration, @EnableAutoConfiguration, @ComponentScan 을 합친 어노테이션
+Main Class 위에 사용한다.
+@Configurations  :@Bean 어노테이션을 Bean메서드에 적용해 Bean을 생성하게 하는 어노테이션. 만들어진 Bean은
+싱글톤 패턴으로 생성된다.
+@EnableAutoConfiguration  : Spring Boot의 자동 설정기능을 사용할 것임을 명시
+@ComponentScan : Main Class가 위치한 Root Package부터 이하 모든 패키지의 클래스를 검색해 @Component, @Controller, @Service, @Repository 어노테이션이 부여된 모든 클래스를 Bean으로 등록
+@Bean :Method 위에 사용하며 해당 메서드의 return objec를 bean으로 등록한다. 외부라이브러리의 객체를 bean으로 등록할 때 사용한다.
+@Component :Class 위에 사용하여 해당 클래스의 객체를 Bean으로 등록한다.

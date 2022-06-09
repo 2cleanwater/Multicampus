@@ -1,0 +1,13 @@
+servley/ jsp
+
+1. 기획의도, 수익창출, 레이아웃 (화면이동)
+2. 데이터베이스 설계 = .sql
+3. MVC 패턴의 패키지 명명 / 클래스이름 명명
+4. connection pool -> context.xml or
+<GlobalNamingResources> -> Server.xml
++ <resource-ref /> -> web.xml
+5. JDBCTemplate -> Connection, Close_(3개 ResultSet, Statement, Connection),
+			Commit, Rollback, is로 연결과 클로즈상태 메소드 추가
+6. Dao -> entity + Crud
+7. Biz
+8. Controller + View

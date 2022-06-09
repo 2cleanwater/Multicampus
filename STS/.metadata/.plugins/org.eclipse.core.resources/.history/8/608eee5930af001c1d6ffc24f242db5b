@@ -1,0 +1,15 @@
+package com.test.mytest;
+
+‘import org.springframework.beans.factory.annotation.Autowired;
+
+@RestController
+
+public class MyController {
+@Autowired
+private MyService myservice;
+
+@GetMapping(value="/server", produces=MediaType. TEXT_EVENT_STREAM_VALUE)
+Flux<Address> serviceAddress(){
+
+return this.myservice.getAllAddress();
+}

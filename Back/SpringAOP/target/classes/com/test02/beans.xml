@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-5.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-5.3.xsd">
+<!--  윗줄 도움말 참고  
+https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#xsd-schemas-aop
+ -->
+ 
+ <!--  윗줄 애들이 다 올라가고 
+ 	2. g7, student, myAdvice, myAdvisor 을 올린다. 
+  -->
+<bean id ="g7" class="com.test02.G7_Class"/>
+<bean id ="student" class="com.test02.Student"/>
+
+<!-- 공통사항  : Advice -->
+<bean id="myAdvice" class="com.test02.MyAspect"/><!--  7번  -->
+
+<!-- 핵심관심사항 : 무엇을 할지(Advice) + 어느시점(pointcut) = Aspect
+실제로 일을 하는애는 aop.aspectj.AspectJExpressionPointcutAdvisor 임. 
+-->
+<bean id="myAdvisor"
+class = "org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+<!-- 공통 사항 메소드를 가로채기 한 다음 전체 실행 중에 proceed()를 호출한다.  -->
+	<property name="advice" ref="myAdvice"></property><!-- 6 번받고  -->
+	
+	
+	<property name="expression" value = "execution(public * *(..))"></property>
+<!-- "execution(public **(. .)) 이렇게 생긴애를 가로채기 해서  <property name="advice" ref="myAdvice"></property>를 실행 
+점 점 사이에 꼭 띄어쓰기해야함! 
+-->
+</bean>
+<!-- $ 6.8.1  위의 애들을 다 올려놓고 대기.. 자동으로 매핑해주는 클래스 -->
+<!-- 5. 메소드 실행하면 가로채기 해서 자동 으로 매핑 해서  myAdvisor 에게 전달 -->
+<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+</beans>

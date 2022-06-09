@@ -1,0 +1,14 @@
+https: //docs.spring.io/spring-data/jpa/docs/current/api/
+https: //docs.spring.io/spring-data/jpa/docs/current/reference/html/#new-features .2-5-0
+
+<<JPA 주요 인터페이스 >> MonJa
+
+1) Repository<T,ID> :
+
+2) CRUD JPA Repository<T, ID> : 
+
+3) JpaRepository<T, ID> : 
+
+4) PagingAndSortingRepository<T,ID> : 
+
+5) QueryByExampleExecutor<T> : 

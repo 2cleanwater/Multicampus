@@ -1,0 +1,16 @@
+package com.mydb.boot.controller;
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	UserService userService;
+	
+	public String insert(@RequestBody User user) {
+		if(userService.insertOne(user)) {
+			return "입력 성공!!";
+		} else {
+			retrun "실패 ㅠ";
+		}
+	}
+}

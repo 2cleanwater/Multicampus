@@ -1,0 +1,5 @@
+package com.myjpa.repository;
+
+public class MyRepository {
+
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+   
+
+  <title>로그인</title>
+
+  <style>
+	  body{background-color:#eeeeee;}
+	  *{margin:0;padding:0;}
+	  img{border:0;}
+	#join{display: flex;justify-content: center;;
+		height:780px;}  
+	#join img{display: block;width:15%;height:auto;margin:20px auto;}
+	.logo{width:50px;height:auto;margin:20px auto;}
+    #join fieldset{
+		border:none;
+	  display:block;
+	  width:260px;
+	  height:100%;
+	  padding:5px 10px 6px 7px;
+	}
+	input{border:#d7d7d7 1px solid;}
+	 #join ul li{ list-style:none; 
+		margin: 5px 0; }
+     #join label {
+	    font-size:16px;
+	    font-weight:600;
+		width:100%;
+		float:left; }
+		#join input{height:33px;}
+		.nbirth_month{width: 50px; height:33px;}
+        input::placeholder{text-align: right;padding-right:20px;}
+    .call{
+	  display:block;
+	  background-color:#634e4e;
+	  border:none;
+	  padding:10px;
+	  float:right;
+	  color:white;margin-right:20px;
+	}
+	.subm{width:100%;height:55px;float:left; }
+	.subm button{border:none;display: block;padding:10px 20px;color:white;margin:0 auto;background-color:#634e4e;margin-top:10px;}
+  </style>
+ </head>
+
+ <body>
+	<header>
+		<header class="top">
+		  <img src="../img/logo.svg" class="logo" alt="logo">
+		  <ul class="lo">
+			<li></li>
+			<li><a href="../index.html">HOME</a></li>
+			<li><a href="./join.html">JOIN</a></li>
+			<li><a href="./login.html">LOGIN</a></li>
+			<li><a href="./favorite.html">MY <img src="../img/star.svg" class="star" alt="star"></a></li>
+	</ul>
+	  </nav>
+	  </header>
+    <form id="join">
+	 <fieldset id="nreg">
+	  <ul>
+	  <label for="ned"><li>ID</li>
+	    <li><input type="text" id="nid" size="33" placeholder="ID" ></li></label>
+	  <label for="npwd"><li>Password</li>
+	    <li><input type="password" id="npwd" size="33"placeholder="password" onclick="mese()"></li></label>
+	  
+		<div class="subm">
+     <button type="submit"  onclick="func()" >로그인</button>
+	</div>
+  	 </ul>
+	 </fieldset>
+	</form>
+
+ </body>
+ <script type="text/javascript">
+	 function mese(){
+		let id = document.getElementById('nid').value;
+		if(id==""){
+			alert("아이디를 입력해 주세요.");
+		}
+	 }
+	function func() {
+		let id = document.getElementById('nid').value; 		
+		let pw = document.getElementById('npwd').value; 		
+		if(id=="ddd"){ 		
+			if(pw=="1234"){ 			
+			document.write(user_id+"님 반갑습니다!");
+			}else{ 				
+			alert("비밀번호가 일치하지 않습니다.");
+			location.reload(); 		
+			} 					
+		}else{ 				
+			alert("아이디가 일치하지 않습니다.");
+				location.reload(); 		
+			}
+} 				
+</script>
+</html>
+
+

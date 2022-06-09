@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+<body>
+	<section class="border p-1 m-3">
+		<form method="post" th:action="@{/}">
+			<div class="mb-3">
+				<label for="title" class="form-label">title</label> <input
+					type="text" class="form-control" name="title" id="title">
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary">확인</button>
+			</div>
+		</form>
+	</section>
+	<main class="border p-1 m-3">
+	<hi> 목록</h1>
+	<ul class="list-group">
+		<li class="list-group-item" th:each="book : ${books}"
+			th:text="${book.title}">
+	</ul>
+	</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.test.mytest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import reactor.core.publisher.Mono;
+
+@Controller // 웹페이지를 반환하는 스프링 웹 컨트롤ㄹ러
+public class ServletController {
+	@GetMapping //기본 url 
+	Mono<String> Indexhome(){ // 템플릿 이름을 나타내는 문자열을 Mono에 담아서 리턴
+		return Mono. just("home"); // home
+	}
+}
+//th \= "http://www.thymeleaf.org 비동기 통신을 하기 위해 (리액티브 스트림을 지원하는)"

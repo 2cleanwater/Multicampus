@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#submit').click(function(){
+		var sendData = "username="+ $(".user").val(); //username은  키값!
+		
+		$.ajax({
+			type: "POST",
+			url : "ex02.jsp",
+			data: sendData, // username = 홍길동 
+			dataType : "html", // 응답 받을 타입
+			error : function(){alert("failllllll")},
+			success : function(data){
+				//alert("answer :" + data)
+				//내가 원하는 시점으로 받고싶다.
+				$('#result').html(data) // html(태그) or text(문자열)로 인식
+			}
+		});
+	});
+});
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+	<label>input name</label>
+	<input type="text" name="username" class="user">
+	<input type="button" id="submit" value="input">
+</form>
+	<h1> Ajax랑 통신하기</h1>
+	<div id = "result"></div>
+</body>
+</html>

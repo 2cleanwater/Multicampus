@@ -1,0 +1,19 @@
+https: //docs.spring.io/spring-data/jpa/docs/current/api/
+https: //docs.spring.io/spring-data/jpa/docs/current/reference/html/#new-features .2-5-0
+
+<<JPA 주요 인터페이스 >> MonJa = Mongo + java
+// 생산성, 유지보수 -> 데이터 중심 설계에서 객체 중심으로 변경 (장점)
+// 자바 -> 복잡한 쿼리 -> 비즈니스로직이 복잡하거나 연산이 중첩되면 매퍼가 편하다. (단점)
+// sql 성능평가가 복잡한 로직일때 저하된다.
+
+// 실무자는 ? -> jpa / mapper
+
+1) Repository<T,ID> :
+
+2) CRUD JPA Repository<T, ID> : 
+
+3) JpaRepository<T, ID> : 
+
+4) PagingAndSortingRepository<T,ID> : 
+
+5) QueryByExampleExecutor<T> : 

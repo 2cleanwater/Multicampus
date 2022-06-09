@@ -1,0 +1,5 @@
+package my.com.common.validator;
+
+public class JoinForm {
+
+}

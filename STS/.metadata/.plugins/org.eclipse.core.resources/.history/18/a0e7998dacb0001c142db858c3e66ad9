@@ -1,0 +1,33 @@
+package com.my.boot.Controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.my.boot.domain.Member;
+
+@Controller
+public class ServletController {
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
+	
+	@GetMapping("/input")
+	public String index02() {
+		return "inputMember";
+	}
+	
+	private static List<Member> member_all = new ArrayList();
+	public ModelAndView saveEmployee(@ModelAttribute Member member, ModelAndView mav) {
+		mav.setViewName("memberDetails");
+		member_all.add(member);
+		mav.addObject("memberList", member_all);
+		return mav;
+		
+	}
+}

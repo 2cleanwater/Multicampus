@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box</title>
+  <style type="text/css">
+
+    .box { border: 1px solid orange; padding: 10px; }
+
+    #one { border: 1px solid gray; width: 100%; 
+      display: grid;
+      /* grid-template-columns: 200px 200px 200px; */
+      /* grid-template-columns: 1fr 2fr 1fr; */
+      /* grid-template-columns: 100px 2fr 1fr; */
+      grid-template-columns: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+      grid-template-rows: 100px;
+    }
+    #two { border: 1px solid gray; width: 100%; 
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    #three { border: 1px solid gray; width: 100%; 
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, auto));
+    }
+
+    /*
+      반복 개수가 정해지지 않은 경우 유용. 
+      auto-fill => 공간이 남으면 안 채움
+      auto-fit => 공간이 남으면 늘려 채움
+    */
+    #four { border: 1px solid gray; width: 100%; 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+
+    #five { border: 1px solid gray; width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <div id="one">
+    <div class="box">A</div>
+    <div class="box">A</div>
+    <div class="box">A</div>
+  </div>
+  <br>
+
+  <div id="two">
+    <div class="box">B</div>
+    <div class="box">B</div>
+    <div class="box">B</div>
+  </div>
+
+  <div id="three">
+    <div class="box">C</div>
+    <div class="box">C</div>
+    <div class="box">C</div>
+  </div>
+
+  <div id="four">
+    <div class="box">D</div>
+    <div class="box">D</div>
+    <div class="box">D</div>
+  </div>
+
+  <div id="five">
+    <div class="box">E</div>
+    <div class="box">E</div>
+    <div class="box">E</div>
+
+    <div class="box">E</div>
+    <div class="box">E</div>
+    <div class="box">E</div>
+  </div>
+
+</body>
+</html>

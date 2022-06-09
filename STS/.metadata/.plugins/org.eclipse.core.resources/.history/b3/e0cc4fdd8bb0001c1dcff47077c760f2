@@ -1,0 +1,5 @@
+package com.my.boot.domain;
+
+public class Member {
+
+}

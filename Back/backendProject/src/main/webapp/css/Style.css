@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+*{margin:0;padding:0;}
+ 
+.title {
+     border-bottom: 1px solid black; 
+     margin: 15px; 
+     padding: 10px;
+     text-align: center
+}
+label {
+     margin-left: 15px;
+     display: inline-flex;
+     flex-wrap: nowrap;
+}
+.input-box {
+     position: absolute;
+     left: 50%;
+     transform: translate(-49%, -50%);
+}
+ 
+.buttons {
+     width: 50px;
+     margin:10px;
+}
+.user-selection {
+     display: flex;
+     justify-content: center;
+}

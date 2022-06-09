@@ -1,0 +1,5 @@
+package com.my.boot.Controller;
+
+public class ServletController {
+
+}

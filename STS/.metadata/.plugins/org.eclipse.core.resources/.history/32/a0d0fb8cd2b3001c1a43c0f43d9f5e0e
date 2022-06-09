@@ -1,0 +1,10 @@
+package my.com.index.controller;
+
+@Controller
+public class indexController {
+	
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
+}

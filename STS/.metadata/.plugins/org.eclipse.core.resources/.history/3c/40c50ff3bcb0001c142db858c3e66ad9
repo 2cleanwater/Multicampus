@@ -1,0 +1,5 @@
+package com.mydb.boot.service;
+//View -> Controller -> Biz -> Dao
+public class UserService {
+
+}

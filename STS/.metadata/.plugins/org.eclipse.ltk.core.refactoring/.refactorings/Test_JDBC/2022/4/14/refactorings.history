@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.mydb.boot&apos; to &apos;Test_JPA/src/test/java&apos;&#x0D;&#x0A;- Original project: &apos;Test_JDBC&apos;&#x0D;&#x0A;- Destination element: &apos;Test_JPA/src/test/java&apos;&#x0D;&#x0A;- Original element: &apos;Test_JDBC/src/test/java/com.mydb.boot&apos;" description="Copy package" destination="=Test_JPA/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.mydb.boot" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1648781620788" version="1.0"/>
+</session>

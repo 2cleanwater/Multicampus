@@ -1,0 +1,24 @@
+<<spring-Boot 기본 설계 >>
+
+1) 세션 레디스 (Session Redis) , H2 or MySql : 세션관리 비정형, 정형_기본 데이터 저장 (RDB)
+
+2) spring boot web MVC : 웹설계 구현 로직 spring-boot-starter-web
+
+3) spring boot Session Redis : 레디스(제디스)를 이용한 비정형 세션 관리
+
+4) spring boot Security / spring boot  OAuth2 : 회원 인증, 권한 관리
+
+5) Spring boot data Rest : Rest API
+
+6) Spring boot Batch : app을 만들면 버전관리, 백앤드 데이터 및 모듈관리를 주기적으로 관리.
+
+7) Spring boot  Data : JDBC, spring-JDBC, JPA 등 
+			spring-boot-starter-data-jpa
+			spring-boot-starter-data-rest
+			spring-boot-starter-data-redis
+			spring-boot-starter-aop
+			spring-boot-starter-batch
+			
+			JPA -> Hibernate -> dbserver
+			h2 -> Mapper(Hibernate / mybatis) -> / dbserver /
+			Redis

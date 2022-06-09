@@ -1,0 +1,8 @@
+마진 상쇄를 .bodyContainer li {
+            display: inline-block;
+            text-decoration: none;
+            list-style-type: none;
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+        }인라인 블럭을 넣는것으로 해결

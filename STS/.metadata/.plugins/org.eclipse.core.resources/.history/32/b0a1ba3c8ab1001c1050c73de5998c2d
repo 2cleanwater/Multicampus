@@ -1,0 +1,26 @@
+package com.myjpa.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.myjpa.repository.PageRepository;
+import com.myjpa.service.MyService;
+@Controller
+
+public class PageController {
+
+@Autowired
+PageRepository repository;
+
+
+			@Autowired
+			MyService service;
+			//localhost:9898/pagelist
+			@RequestMapping("/pagelist")
+				public String index (Model model) {
+					model. addAttribute("mybooks", this.service.findAll02());
+					return "index";
+			}
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <title>서브웨이에 오신 것을 환영합니다.</title>
+    <link rel="icon" href="./img/sw_mini.png">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+    <form id="index">
+        <div class="headContainer">
+            <div class="logo">
+                <a href="./index.html" id="main_img"><img src="./img/pngwing.com.png" alt="ㅅㅂㅇㅇ" width="300px"></a>
+            </div>
+        </div>
+            <div class="util_menu">
+                <ul>
+                    <li><a href="./login_form.html">로그인</a></li>
+                    <li><a href="./insert.jsp">회원가입</a></li>
+                    <li><a href="./customerSelect.do">회원정보보기</a></li>
+                </ul>
+            </div>
+        <div class="bodyContainer">
+            <div class="title">
+                <h1>추천메뉴</h1>
+                <p>검증된 맛으로 냠냠쳡쳡</p>
+            </div>
+            <div class="menuType">
+                <ul>
+                    <li>
+                        <div>
+                        ALL
+                        </div>
+                    </li>
+                    <li><div>클래식</div></li>
+                    <li><div>프레시&라이트</div></li>
+                    <li><div>프리미엄</div></li>
+                    <li><div>아침메뉴</div></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bmt.jpg" name="bmt"alt="bmt" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>이탈리안 비엠티</div>
+                        <div>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전서계가 사랑하는 써브웨이의 베스트셀러!</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/blt.jpg" name="blt"alt="blt" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>비엘티</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/eggmayo.jpg" name="eggmayo"alt="eggmayo" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>에그마요</div>
+                        <div>부드러운 달걀과 고소한 마요네즈가 만나 더 부드러운 스테디셀러</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/ham.jpg" name="ham" alt="ham" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>햄</div>
+                        <div>기본 중에 기본! 풍부한 햄이 만들어내는 입 안 가득 넘치는 맛의 향연</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/hameggcheese.jpg" name="hameggcheese"alt="hameggcheese" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>햄, 에그 & 치즈</div>
+                        <div>푹신한 오플렛과 햄의 가장 클래식한 조화/div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:openModal('menu_detail');" class="modal-open">
+                                <div>
+                                    <img src="./img/menu/bacon.jpg" name="bacon"alt="bacon" width="150px">
+                                </div>
+                            </a>
+                        </div>
+                        <div>베이컨, 에그 & 치즈</div>
+                        <div>오리지널 아메리칸 스타일 베이컨으로 더욱 풍성한 아침 식사</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="selected_menu">
+                <ul>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                    <li>
+                        <div>메뉴종류1</div>
+                        <button>삭제</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="calculate_menu">
+                <div><h1>전체금액</h1></div>
+            </div>
+            <div class="calculate">
+                <div><h2>0원</h2></div>
+            </div>
+            <div class="check_button">
+                <button>결제하기</button>
+            </div>
+        </div>
+
+        <div class="option_select">
+            <div id="modal"></div>
+            <div class = "modal_con menu_detail">
+                <a href="javascript:;" class="close">X</a>
+                <ul>
+                    <li><div class="modal_pic">사진</div></li>
+                    <li><div class="modal_text">설명</div></li>
+                    <li><div class="modal_select">
+                        <div class="">
+                            <div><input type="radio" name="빵" value="빵이름1"/>빵이름1</div>
+                            <div><input type="radio" name="빵" value="빵이름2"/>빵이름2</div>
+                            <div><input type="radio" name="빵" value="빵이름3"/>빵이름3</div>
+                            <div><input type="radio" name="빵" value="빵이름4"/>빵이름4</div>
+                            <div><input type="radio" name="빵" value="빵이름5"/>빵이름5</div>
+                            <div><input type="radio" name="빵" value="빵이름6"/>빵이름6</div>    
+                        </div>
+                    </div></li>
+                    <li><button>추가</button></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

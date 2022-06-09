@@ -1,0 +1,11 @@
+
+
+
+
+4)주요 출력 메소드  
+   4-1. forEach (Consumer <? super T> consumer) : 
+   Stream의 각 요소를 consumer가 인수로 처리한다.
+   병렬로 사용하면 원래 데이터가 List와 같은 집합체에서 순서를 보장하지 않는다  
+   
+   4-2. forEachOrdered (Consumer <? super T> consumer) : 
+         Stream의 객체요소를 consumer가 순서대로  매개 인수를 처리한다.

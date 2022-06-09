@@ -1,0 +1,42 @@
+1. Spring_JDBC의 API를 연동하고 이해할 수 있다.
+
+	1-1) springJDBC : org.springframework.jdbc.datasource.SimpleDriverDataSource
+	-springJDBC(DAO) -> https://spring.io/projects/spring-data-jdbc
+
+	spring + ORM (object - relational mapping)
+		ibatis(ver 2.0 , 3.0) , mybatis(5.0) / Hibernate[s]
+		.xml로 쿼리를 작성한 파일을 객체로 매핑하는 것
+
+2. ORM의 태그설정, @기법, 동적쿼리등을 살펴보고 적용할 수 있다.
+
+==============================================================================
+
+-test01 : DriverManagerDataSource / JDBCTemplate
+	
+https://docs.spring.io/spring-framework/docs/5.3.16/reference/html/data-access.html#dao
+
+[$3.3.1]
+JDBCTemplate
+		1)update() / update, insert, delete
+		2)query() / select / update / insert / delete의 쿼리를 받아서 실행
+		3)queryforObject() : select 형 Object -> sql find
+		4)queryforInt() / query의 return type
+		
+-test02 : DB 속성파일에 변수 및 <beans> xml 값 대입
+		  Entity 접목하자.
+	2-1) Spring JDBC는 dataSource로 connection을 하고
+		JDBCTemplate으로 CRUD를 한다.
+		
+	2-2) JbdcDaoSupport를 상속받아서 dataSource 연결하고 getJdbcTemplate() 메소드를 리턴받아서
+	CRUD 메소드를 호출한 코드 FirstJdbcDaoImple 
+		 
+-test03 : test02를 @로 설정해서 사용
+
+-test04 : mybatis 연동해보자
+		  4-1)환경설정 -> .xml(config)
+		  4-2)쿼리	-> .xml(mapper), @ : interface, 동적쿼리
+		  
+-test05: maybatis 연동해 보자.
+		쿼리 -> @ : interface 매퍼로 구현해 보자.
+		  
+-test06: @SelectProvider로 변환해서 new Sql()를 사용해서 쿼리를 변경해 보자.

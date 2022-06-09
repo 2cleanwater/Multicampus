@@ -1,0 +1,28 @@
+package com.mydb.boot.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mydb.boot.domain.User;
+import com.mydb.boot.service.UserService;
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	UserService userService;
+	
+	public String insert(@RequestBody User user) {
+		if(userService.insertOne(user)) {
+			return "입력 성공!!";
+		} else {
+			return "실패 ㅠ";
+		}
+	}
+	
+	@GetMapping("/selectMany")
+	public List<User> selectMany() {
+		return userService.selectMany();
+	}
+}

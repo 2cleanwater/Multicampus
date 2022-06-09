@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./signUp.css">
+    <title>회원가입</title>
+    <link rel="icon" href="./img/sw_mini.png">
+    <script type="text/javascript" src="./signUp.js"></script>
+}
+    </script>
+</head>
+<body>
+    <form name="signUp" id="signUp">
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html" id="main_img"><img src="./img/pngwing.com.png" alt="ㅅㅂㅇㅇ" width="300px"></a>
+            </div>
+        </div>
+            <div class="util_menu">
+                <ul>
+                    <li><a href="./login.html">로그인</a></li>
+                    <li><a href="./signUp.html">회원가입</a></li>
+                </ul>
+            </div>
+        
+        <fieldset id="field">
+            <div class="signin_title">
+                <h1>회원 가입</h1>
+                <p>서브웨이 회원가입을 하시면<br />다양한 서비스를 이용할 수 있습니다.</p>
+            </div>
+            <ul>
+                <li><label for="userID">아이디<span class="dot">*</span></label></li>
+                <li>
+                    <input type="text" id="userID" class="userID" placeholder="이메일" > @
+                    <input type="text" name="email_domain" id="email_domain" class="userID" value="" title="이메일 도메인" placeholder="이메일 도메인" maxlength="18"/> 
+                    <select class="userID" name="domain_select" id="domain_select" title="이메일 도메인 주소 선택" onchange="setDomain();">
+                        <option value="">선택하세요</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="korea.com">korea.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="1">직접입력</option>
+                    </select>
+                    <button>중복 확인</button>
+                </li>
+
+                <li><label for="userPW">비밀번호<span class="dot">*</span></label></li>
+                <li>
+                    <input type="password" id=userPW minlength="10" placeholder="" >
+                </li>
+                <li><p>※ 비밀번호는 <span class="red_text">문자, 숫자, 특수문자(~!@#$%^&*)의 조합
+                    10자리 이상</span>으로 입력이 가능합니다.</p></li>
+
+                <li><label for="userPW_check">비밀번호 재입력<span class="dot">*</span></label></li>
+                <li><input type="password" id=userPW_check placeholder="비밀번호를 다시 입력해 주세요." ></li>
+
+                <li><label for="userTel">휴대폰 번호<span class="dot">*</span></label></li>
+                <li>
+                    <select id="userTel_1" class="userTel ">
+                        <option value="tel_010">010</option>
+                        <option value="tel_011">011</option>
+                        <option value="tel_016">016</option>
+                    </select>
+                    <input type="text" id="userTel_2" class="userTel midInThree" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                    <input type="text" id="userTel_3" class="userTel" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </li>
+                <li>
+                    <input type="text" id="idt_num" placeholder="인증번호 입력">
+                    <button>인증번호받기</button>
+                </li>
+
+                <li><label for="userBirth">생년월일</label></li>
+                <li>
+                    <input type="text" class="userBirth " id=userYear maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                    <select class="userBrith midInThree" id="userMonth">
+                        <option value="jan">1</option>
+                        <option value="feb">2</option>
+                        <option value="mar">3</option>
+                        <option value="apr">4</option>
+                        <option value="may">5</option>
+                        <option value="jun">6</option>
+                        <option value="jul">7</option>
+                        <option value="aut">8</option>
+                        <option value="sep">9</option>
+                        <option value="oct">10</option>
+                        <option value="nov">11</option>
+                        <option value="dec">12</option>
+                    </select>
+                    <select class="userBirth " id="userDate">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </li>
+
+                <li><label for="userSex">성별</label></li>
+                <li>
+                    <select class="userSex" >
+                        <option value="male">남성</option>
+                        <option value="female">여성</option>
+                    </select>
+                </li>
+
+                <li><label for="userAddress">주소</label></li>
+                <li><input type="text" id=userAddress placeholder="주소"></li>
+
+                <li><div class="dot">*</div> &nbsp필수입력사항</li>
+            </ul>
+            <div class="subm_btn">
+                <button class="btns" type="button" id="login_btn" onclick="signUpVal();">가입하기</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

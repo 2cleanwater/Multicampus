@@ -1,0 +1,18 @@
+package my.com.common.validator;
+
+import org.springframework.batch.item.validator.ValidationException;
+import org.springframework.batch.item.validator.Validator;
+
+public class JoinFormValidator implements Validator{
+
+	@Override
+	public boolean supports(Class<?> clazz) {
+		return JoinForm.class.equals(clazz);
+	}
+	@Override
+	public void validate(Object value) throws ValidationException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

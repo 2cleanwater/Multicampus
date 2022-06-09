@@ -1,0 +1,36 @@
+CREATE TABLE BOOK (
+	ID int auto_increment PRIMARY KEY,
+	TITLE VARCHAR(255) NOT NULL
+);
+INSERT INTO BOOK(TITLE) VALUES ('Getting Start Java');
+INSERT INTO BOOK(TITLE) VALUES ('Getting String Spring');
+INSERT INTO BOOK(TITLE) VALUES ('Getting String Web');
+
+alter table book auto_increment = 1;
+
+https://docs.spring.io/spring-data/jpa/docs/current/api/
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#new-features.2-5-0
+
+<<JPA 주요 인터페이스 >> MonJa = Mongo + java
+생산성, 유지보수 -> 데이터 중심설계에서 객체중심으로 변경 (장점)
+
+자바 -> 복잡한 쿼리 -> 비즈니스로직이 복잡하거나 연산이 중첩되면 매퍼가 편하다. (단점)
+sql 성능평가가 복잡한 로직일때 저하된다.
+
+	실무자는 (생산성, 유지보수) ? -> jpa / mapper
+	T : Entity의 타입, ID : P.K 타입
+	
+	사원테이블을 관리하는  JPA , EMP (empno(pk) -int, empname, sal, mgr, deptno)
+		Repository<T,ID> -> Repository<EMP, Integer>{}
+		
+1) Repository<T,ID> : 쿼리문 사용
+
+2)CrudJpaRepository<T,ID> : CRUD 전용
+
+3) JpaRepository<T, ID> : 페이징과 정렬, 탐색, 쿼리문 전용 
+
+4) PagingAndSortingRepository<T,ID> : 페이징과 정렬, 탐색
+
+5) QueryByExampleExecutor<T> : 쿼리문 전용
+
+

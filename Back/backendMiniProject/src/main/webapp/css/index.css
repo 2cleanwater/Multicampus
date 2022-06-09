@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  background-color: #f6f6f6;
+}
+.headContainer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.util_menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  flex-wrap: nowrap;
+  background-color: #009223;
+}
+.util_menu li {
+  margin-right: 20px;
+  list-style-type: none;
+}
+.util_menu a {
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 30px;
+  height: 30px;
+  text-decoration: none;
+}
+.util_menu a:hover {
+  color: #ffca08;
+}
+.bodyContainer {
+  display: grid;
+  grid-template-columns: 200px 2fr 1fr;
+  border: 4px solid darkgreen;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.bodyContainer > div {
+  border: 1px solid darkgreen;
+}
+.bodyContainer ul {
+  justify-items: center;
+}
+.bodyContainer li {
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+}
+/* 메누보드  */
+.selected_menu li button {
+  opacity: 0;
+}
+li:hover > button {
+  opacity: 1;
+}
+.title {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.menuType {
+  height: 700px;
+  overflow: auto;
+}
+.menuType ul {
+  justify-items: center;
+}
+
+.menuType li {
+  border: 1px solid green;
+}
+.menu {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: 700px;
+  overflow: auto;
+}
+.menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.menu li {
+  width: 250px;
+  height: 250px;
+}
+.menu li div {
+}
+.menu ul > * {
+  border: 1px solid red;
+}
+.selected_menu {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 190px;
+  overflow: auto;
+  white-space: nowrap;
+}
+.selected_menu ul > * {
+  border: 1px solid blue;
+}
+.calculate_menu {
+  text-align: center;
+  padding: 10px;
+}
+.calculate {
+  text-align: right;
+  padding: 10px;
+}
+.calculate div {
+  display: inline-block;
+}
+.check_button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #009223;
+  color: #ffca08;
+  font-size: 25px;
+}
+#modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.modal_con {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: #fff;
+  border: 1px solid #009223;
+}
+.modal_con li {
+  list-style-type: none;
+}
+
+.modal_con .close {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  right: 10px;
+  top: 10px;
+}

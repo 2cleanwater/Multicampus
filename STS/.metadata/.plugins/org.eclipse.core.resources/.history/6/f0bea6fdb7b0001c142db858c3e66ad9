@@ -1,0 +1,50 @@
+package com.mydb.boot.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.mydb.boot.domain.User;
+
+@Repository("UserDaoJdbc")
+public class UserDaoJdbc implements UserDao{
+	
+	@Autowired
+	JdbcTemplate jdbc;
+	@Override
+	public int insertOne(User user) throws DataAccessException {
+		String insert_sql = "insert into m_user values(?,?,?,?,?)";
+		int res = jdbc.update(insert_sql, user.getUserId(), user.getPassword(), user.getUserName(),
+				user.getAge(),user.getRole())
+		// TODO Auto-generated method stub
+		return res;
+	}
+
+	@Override
+	public User selectOne(String userId) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> selectMany() throws DataAccessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int updateOne(User user) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteOne(String userId) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

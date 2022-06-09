@@ -1,0 +1,18 @@
+<html>
+<head>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lYdCYycxq6yEvBxcE4apkDrY_KscU-XMmX7rUF_zrV6c7LqRwVcz-ag1WPQ9gLzAp9JqbfXNkPdKpvZe9dQucaV6qY8XCzqCNQk3XSLV7LH_GtHCobQeM4JxJGL-XZRn" charset="UTF-8"></script><script type="text/javascript">
+	function inNumber(){
+		if(event.keyCode<48 || event.keyCode>57){
+		   event.returnValue=false;
+		}
+	}
+	</script>
+</head>
+
+ <body>
+	
+	<input type="text" onkeypress="inNumber();"/>  
+
+	<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>  
+ </body>
+</html>

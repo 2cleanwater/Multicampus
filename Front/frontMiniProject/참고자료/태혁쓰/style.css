@@ -1,0 +1,183 @@
+body {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 20px;
+  line-height: 1.2;
+}
+
+.memberInfo_wrap {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20%;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+}
+
+.memberInfo_wrap span {
+  display: flex;
+  align-items: center;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.nav_menu li {
+  border: 1px solid gray;
+  text-align: center;
+  font-weight: bold;
+  width: 100px;
+  padding: 5px;
+  float: left;
+}
+
+.totalSearch_wrap {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20%;
+}
+
+/* .totalSearch_wrap {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    padding: 0 36px 0 10px
+} */
+
+.nav_overMenu {
+  transition: display 0.5s;
+}
+
+.movie-chart {
+  font-size: 20px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.movie-chart span {
+  font-weight: 400;
+  color: gray;
+}
+
+.autoplay {
+  position: relative;
+}
+
+.autoplay .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 71px;
+  height: 71px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.autoplay button.slick-prev {
+  left: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+.autoplay button.slick-prev::before {
+  content: "\e93d";
+}
+
+.autoplay button.slick-next {
+  right: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+.autoplay button.slick-next::before {
+  content: "\e940";
+}
+
+.autoplay button::before {
+  font-family: "xeicon";
+  color: white;
+  font-size: 45px;
+  border: none;
+}
+
+.movie-poster {
+  margin-top: 5%;
+}
+
+.autoplay button.link {
+  position: absolute;
+  top: 160px;
+  left: 30%;
+}
+
+.autoplay button.detail {
+  position: absolute;
+  top: 230px;
+  left: 30%;
+}
+
+.autoplay button.link:hover {
+  transform: scale(0.9);
+  background-color: rgba(240, 248, 255, 0.755);
+}
+
+.autoplay button.detail:hover {
+  transform: scale(0.9);
+  background-color: rgba(240, 248, 255, 0.755);
+}
+
+.poster {
+  position: relative;
+}
+.poster button {
+  opacity: 0;
+}
+
+.poster:hover button {
+  opacity: 1;
+}
+
+.post {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.83);
+}
+
+.poster:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.autoplay:hover {
+  opacity: 1;
+}

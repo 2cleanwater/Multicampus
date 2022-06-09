@@ -1,0 +1,19 @@
+${}에 jsp 내장객체를 사용할 수 있다.
+pageScope,
+requestScope,
+sessionScope, 
+applicationScope
+param , -> 파라미터 변수들
+paramValues
+header, -> HTTP request 헤더
+headerValues, 
+initParam,
+cookie,
+pageContext
+
+JLTL (JSP Standard Tag Library) : JCP(http://www.jcp.org)에서
+표전을 제정해서 만들어진 Custom Tag의 표준이다.
+
+
+Work_shop
+	- webscore의 view 페이지 코드를 모두 jstl/el 바꾸자

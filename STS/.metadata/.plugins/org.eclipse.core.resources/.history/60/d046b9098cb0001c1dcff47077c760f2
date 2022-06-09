@@ -1,0 +1,9 @@
+package com.my.boot.Controller;
+
+@Controller
+public class ServletController {
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
+}

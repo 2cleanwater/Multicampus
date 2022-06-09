@@ -1,0 +1,10 @@
+https: //docs.spring.io/spring-data/jpa/docs/current/api/
+https: //docs.spring.io/spring-data/jpa/docs/current/reference/html/#new-features .2-5-0
+
+<<JPA 주요 인터페이스 >>|
+Repository<T,ID>
+
+JpaRepository<T, ID>
+PagingAndSortingRepository<T,ID>,
+
+QueryByExampleExecutor<T>

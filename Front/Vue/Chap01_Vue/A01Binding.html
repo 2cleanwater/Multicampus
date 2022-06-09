@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <title>A01 Binding</title>
+</head>
+<body>
+    <div class="card-body">
+        <h3>{{title}}</h3>
+
+        <div>
+            <h5>1. 일반적 바인딩</h5>
+            일반적인 단방향 바인딩: <br>
+            함수의 리턴값: <br>
+            함수의 리턴값: <br>
+            배열: <br>
+            객체: <br>
+        </div>
+        <br>
+
+        <div>
+            <h5>2. 바인딩 연산</h5>
+            일반적 연산: <br>
+            속성 참조: <br>
+            속성 참조 연산: <br>
+            비교 연산: <br>
+            비교 연산: <br>
+            삼항 연산: <br>
+        </div>
+        <br>
+
+        <div>
+            <h5>3. 바인딩 관련 지시자</h5>
+            v-text: <span></span><br>
+            v-html: <span></span><br>
+            v-once: <span></span><br>
+            v-pre: <span></span><br>
+            <br>
+            <button>Change</button>
+            <button>Change</button>
+            <br>
+        </div>
+
+        <div>
+            Data에 존재하지 않는 변수: 
+            Data에 존재하지 않는 객체: 
+        </div>
+        <br>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '.card-bod',
+            data: {
+                title: 'A01 Binding 포현식',
+                name: 'NolBu',
+                arr: [10, 11, 100]
+            }
+        })
+    </script>
+</body>
+</html>
